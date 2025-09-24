@@ -1,5 +1,5 @@
 // Importing OS-Module
-const os = require('os')    
+const os = require('os');
 
 // info about current user 
 // const user = os.userInfo()
@@ -14,5 +14,5 @@ const currentOS = {
     release: os.release(),
     totalMem: os.totalmem(),
     freemem: os.freemem()
-}
-console.log(currentOS)
+};
+console.log(currentOS);
