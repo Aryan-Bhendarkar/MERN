@@ -18,8 +18,18 @@
 // Importing external package || Lodash - JavaScript utility library that makes it easier to work with arrays, objects, strings, and functions.
 const _ = require('lodash')
 
-// Flatten the array 
+// // Flatten the array 
 const items = [1, [2, [3, [4]]]]
 const newItems = _.flattenDeep(items) // Flatten the array 
 console.log(newItems)
 
+// // Nodemon will restart server automatically 
+console.log('Hello People')
+
+// console.log('first');
+// setTimeout(() => {
+//     console.log('second');
+// }, 0);
+// console.log('third');
+// console.log('forth');
+// console.log('fifth');
