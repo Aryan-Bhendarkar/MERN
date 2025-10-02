@@ -7,6 +7,7 @@ app.use(express.static('./public'))
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './navbar-app/index.html'))
+    // At this time index.html file not present in public 
 })
 
 app.all('*', (req, res) => {
