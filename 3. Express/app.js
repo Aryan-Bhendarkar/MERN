@@ -45,7 +45,8 @@ const authorize = require('./authorize')
 
 // // Efficient way - use app.use() -> order matters 
 // app.use('/api', logger) - this will apply to all the routh eith /api/... path 
-app.use([logger, authorize])
+// app.use([logger, authorize])
+app.use(express.static('./public'))
 app.get('/',(req, res) => {
     res.send('Home')
 })
