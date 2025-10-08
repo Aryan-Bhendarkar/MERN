@@ -11,17 +11,18 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5001
 
-connectDB()
-
 // Middleware
 app.use(express.json())         //This middleware will parse the JSON body
 app.use(rateLimiter)
 app.use("/api/notes", notesRoutes)
 
-app.listen(PORT, () => {
-    console.log("Server started on PORT:", PORT)
-})
 
+// Firstly, we will connect Database and then will connect server 
+connectDB().then(() => {
+    app.listen(PORT, () => {
+    console.log("Server started on PORT:", PORT)
+    })
+})
 
 
 // EndPoint - It is acombination of URL + HTTP methid that lets the client interact with specific resouce
